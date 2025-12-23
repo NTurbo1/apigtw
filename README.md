@@ -1,6 +1,7 @@
 # Reverse proxy
 This is an educational project to understand and learn about reverse proxy internals, load balancing,
-rate limiting, caching, etc.
+rate limiting, caching, and so on. No frameworks and third-party/external libraries except the go's
+standard library are used unless extremely necessary.
 ### Content
 - [Configuration](#Configuration)
 - [Flags](#Flags)
