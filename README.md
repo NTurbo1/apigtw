@@ -4,14 +4,14 @@ rate limiting, caching, etc.
 ### Content
 - [Configuration](#Configuration)
 - [Flags](#Flags)
-- [Environment Variables](#Environment)
+- [Environment Variables](#Environment%20Variables)
 - [License](#License)
 
 ## Configuration
 - We use json files for configuration files just because we don't have to implement a parser from
 scratch for that thanks to the go's stdlib.
-- Default configuration filepaths are set in the [environment variables](#Environment). You should edit
-the variables if you want to have custom configuration filepaths. You can check the default values [here](#Environment)
+- Default configuration filepaths are set in the [environment variables](#Environment%20Variables). You should edit
+the variables if you want to have custom configuration filepaths. You can check the default values [here](#Environment%20Variables)
 - You can specify the filepath for the main app config file using the flag `--app-config-file` which
 updates the value of the env variable `REVERSE_PROXY_APP_CONFIG_FILE`, which has a default value 
 `app.configs.json`. ALL CONFIGURATION FILE FORMATS ARE EXPECTED TO BE JSON! ANY CONFIGURATION VALUE
@@ -23,8 +23,8 @@ about the flags are [here](#Flags)
 ## Flags
 |Name|Description|Required|Usage|Default|
 |:--:|:---------:|:------:|:---:|:-----:|
-|`--app-config-file`|Edits the value of the env variable `REVERSE_PROXY_APP_CONFIG_FILE`|false|`--app-config-file=<filepath>`|Check [Environment Variables](#Environment)|
-|`--debug`|Edits the value of the env variable `REVERSE_PROXY_LOG_LEVEL`|false|`--debug`|Check [Environment Variables](#Environment)|
+|`--app-config-file`|Edits the value of the env variable `REVERSE_PROXY_APP_CONFIG_FILE`|false|`--app-config-file=<filepath>`|Check [Environment Variables](#Environment%20Variables)|
+|`--debug`|Edits the value of the env variable `REVERSE_PROXY_LOG_LEVEL`|false|`--debug`|Check [Environment Variables](#Environment%20Variables)|
 
 ## Environment Variables
 |Name|Description|Required|Default|
