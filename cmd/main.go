@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"github.com/nturbo1/reverse-proxy/internal/log"
 )
 
 func main() {
-	fmt.Println("Hello from the reverse proxy!")
+	log.Info("Hello from the reverse proxy!")
 }
