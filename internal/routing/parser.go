@@ -3,9 +3,9 @@ package routing
 import (
 	"encoding/json"
 	"os"
-	"fmt"
 
 	"github.com/nturbo1/reverse-proxy/internal/configs"
+	"github.com/nturbo1/reverse-proxy/internal/log"
 )
 
 func parseRoutes(appConfigs *configs.AppConfigs) ([]*Route, error) {
@@ -29,14 +29,14 @@ func parseRoutes(appConfigs *configs.AppConfigs) ([]*Route, error) {
 func parseRoutesFile(filename string) ([]*Route, error) {
 	routesBytes, err := os.ReadFile(filename)
 	if err != nil {
-		fmt.Printf("Failed to read from a routes file: %s\n", filename)
+		log.Error("Failed to read from a routes file: %s", filename)
 		return nil, err
 	}
 
 	var routes []*Route
 	err = json.Unmarshal(routesBytes, &routes)
 	if err != nil {
-		fmt.Printf("Failed to json unmarshal '%s' file content bytes due to: %s\n", filename, err)
+		log.Error("Failed to json unmarshal '%s' file content bytes due to: %s", filename, err)
 		return nil, err
 	}
 
@@ -46,8 +46,8 @@ func parseRoutesFile(filename string) ([]*Route, error) {
 func parseRoutesMasterFile(appConfigs *configs.AppConfigs) (*Routes, error) {
 	routesMasterBytes, err := os.ReadFile(appConfigs.RoutesMasterFile)
 	if err != nil {
-		fmt.Printf(
-			"Failed to read from the routes master file '%s' due to %s\n",
+		log.Error(
+			"Failed to read from the routes master file '%s' due to %s",
 			appConfigs.RoutesMasterFile,
 			err,
 		)
@@ -57,7 +57,7 @@ func parseRoutesMasterFile(appConfigs *configs.AppConfigs) (*Routes, error) {
 	var routesMaster Routes
 	err = json.Unmarshal(routesMasterBytes, &routesMaster)
 	if err != nil {
-		fmt.Printf("Failed to json unmarshal the routes master file content bytes due to: %s\n", err)
+		log.Error("Failed to json unmarshal the routes master file content bytes due to: %s", err)
 		return nil, err
 	}
 

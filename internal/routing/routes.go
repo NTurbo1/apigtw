@@ -50,7 +50,7 @@ func (r Route) String() string {
 func GetRoutes(appConfigs *configs.AppConfigs) ([]*Route, error) {
 	routes, err := parseRoutes(appConfigs)
 	if err != nil {
-		fmt.Println("Failed to parse routes configuration :(")
+		log.Error("Failed to parse routes configuration :(")
 		return nil, err
 	}
 
