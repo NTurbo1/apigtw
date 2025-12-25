@@ -37,3 +37,6 @@ dist
 # Runtime config files
 app.configs.json
 routes.master.json
+
+# Local tests
+test

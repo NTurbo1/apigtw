@@ -1,9 +1,9 @@
 package configs
 
 import (
-	"os"
-	"fmt"
 	"encoding/json"
+	"fmt"
+	"os"
 	"time"
 )
 
@@ -23,4 +23,4 @@ func parseAppConfigs(appConfigFile string, appConfigs *AppConfigs) error {
 	appConfigs.Server.Timeout *= time.Millisecond
 
 	return nil
-} 
+}

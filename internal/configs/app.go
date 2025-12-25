@@ -10,13 +10,15 @@ import (
 
 type AppConfigs struct {
 	LogLevel string `json:"logLevel"`
+	EnvFile string `json:"envFile"`
 	RoutesMasterFile string `json:"routesMasterFile"`
 	Server ServerConfigs `json:"server"`
 }
 func (ac AppConfigs) String() string {
 	return fmt.Sprintf(
-		"{logLevel: %s, routesMasterFile: %s, server: %s}", 
+		"{logLevel: %s, envFile: %s, routesMasterFile: %s, server: %s}", 
 		ac.LogLevel,
+		ac.EnvFile,
 		ac.RoutesMasterFile,
 		ac.Server,
 	)

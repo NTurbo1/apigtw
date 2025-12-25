@@ -18,6 +18,8 @@ updates the value of the env variable `REVERSE_PROXY_APP_CONFIG_FILE`, which has
 `app.configs.json`. ALL CONFIGURATION FILE FORMATS ARE EXPECTED TO BE JSON! ANY CONFIGURATION VALUE
 SPECIFIED IN THE MAIN APP CONFIGS FILE TAKES PRECEDENCE OR OVERWRITES ALL THE OTHER CORRESPONDING VALUES
 SPECIFIED ELSEWHERE, INCLUDING THE ENVIRONMENT VARIABLES!
+- `envFile` field in the app config json file contains the filepath of a json file that represents the 
+application environment (like in NodeJS).
 - You can enable debugging mode in the logs by including `--debug` flag in the command line. More info
 about the flags are [here](#Flags)
 
