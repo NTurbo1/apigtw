@@ -2,7 +2,7 @@
 This is an educational project to understand and learn about api gateway and reverse proxy internals, load balancing,
 rate limiting, caching, and so on. No frameworks and third-party/external libraries except the go's
 standard library are used unless extremely necessary.
-### Table of Contents
+## Table of Contents
 - [Configuration](#Configuration)
 - [Flags](#Flags)
 - [Environment Variables](#Environment-Variables)
